@@ -7,28 +7,28 @@ new Vue({
                     squareColor: 'rgb(0, 0, 0)',
                     middleColor: 'rgb(16, 16, 16)',
                     innerSquareColor: 'rgb(25, 25, 25)',
-                    description: 'Ajusta el contraste al máximo y ve reduciendo gradualmente hasta que puedas distinguir tres tonalidades de negro. Para mejores resultados, observa desde una distancia mínima de 80 cm.'
+                    description: 'Ajusta el contraste al máximo y ve reduciendo gradualmente hasta que puedas distinguir tres tonalidades de negro. Para mejores resultados, observa desde una distancia mínima de 50 cm.'
                 },
                 white: {
                     squareColor: 'rgb(255, 255, 255)',
                     middleColor: 'rgb(248, 248, 248)',
                     innerSquareColor: 'rgb(239, 239, 239)',
-                    description: 'Ajusta el contraste al máximo y ve reduciendo gradualmente hasta que puedas distinguir tres tonalidades de blanco. Para mejores resultados, observa desde una distancia mínima de 80 cm.'
+                    description: 'Ajusta el contraste al máximo y ve reduciendo gradualmente hasta que puedas distinguir tres tonalidades de blanco. Para mejores resultados, observa desde una distancia mínima de 50 cm.'
                 },
                 red: {
                     squareColor: 'rgb(186, 0, 0)',
                     innerSquareColor: 'rgb(186, 186, 186)',
-                    description: 'Ajusta el nivel de gamma del rojo hasta que solo veas un tono rojo uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm.'
+                    description: 'Ajusta el nivel de gamma del rojo hasta que solo veas un tono rojo uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm. Puedes usar el Software: <a href="https://quickgamma.de/indexen.html" target="_blank">QuickGamma</a>'
                 },
                 green: {
                     squareColor: 'rgb(0, 186, 0)',
                     innerSquareColor: 'rgb(186, 186, 186)',
-                    description: 'Ajusta el nivel de gamma del verde hasta que solo veas un tono verde uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm.'
+                    description: 'Ajusta el nivel de gamma del verde hasta que solo veas un tono verde uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm. Puedes usar el Software: <a href="https://quickgamma.de/indexen.html" target="_blank">QuickGamma</a>'
                 },
                 blue: {
                     squareColor: 'rgb(0, 0, 186)',
                     innerSquareColor: 'rgb(186, 186, 186)',
-                    description: 'Ajusta el nivel de gamma del azul hasta que solo veas un tono azul uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm.'
+                    description: 'Ajusta el nivel de gamma del azul hasta que solo veas un tono azul uniforme. Para mejores resultados, observa desde una distancia mínima de 80 cm. Puedes usar el Software: <a href="https://quickgamma.de/indexen.html" target="_blank">QuickGamma</a>'
                 },
             },
             selectedColor: 'black',
@@ -52,7 +52,7 @@ new Vue({
                 <button @click="onColorChange('blue')" class="color-btn blue-btn">Azul</button>
             </div>
             
-            <p class="color-description">{{ currentColors.description }}</p>
+            <div class="color-description" v-html="currentColors.description"></div>
 
             <!-- Outer square -->
             <div 
